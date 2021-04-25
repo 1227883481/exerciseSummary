@@ -116,21 +116,24 @@
 
 ![image-20201217210832588](C:\Users\wang\AppData\Roaming\Typora\typora-user-images\image-20201217210832588.png)
 
-+ 【新知识】包装类的转换
-  1.基本数据类型变包装类，传统方法可以new一个类，参数直接是这个数
-  	即 Integer int1 = new Integer(11);
++ **【新知识】包装类的转换**
+  1.基本数据类型变包装类，传统方法可以new一个类，参数直接是这个数即 Integer int1 = new Integer(11);
   	但是可以直接Float f = 13.0; 来自动装箱
   2.包装类转换为基本数据类型，传统方法可以调用类中的方法xxxValue
   	int num1 = int1.intValue();
-  	但是也可以直接 int num1 = int1；自动拆箱
-
-  3.包装类到string，调用包装类的tostring()方法，tostring存在于最强父类object中，任何类都有。
-  4.string 到包装类，与1相同，new
-  String s = new String("tom");
+  	或者也可以直接 int num1 = int1；自动拆箱
   
-  5.基本数据类型到string，调用string重载的valueOf
-     string.valueOf(12);  此时返回值为string
-6.string转换为基本数据类型；
+3.包装类到string，调用包装类的tostring()方法，tostring存在于最强父类object中，任何类都有。
+  4.string 到包装类，与1相同，new
+  	String s = new String("tom");
+  
+  5.基本数据类型到string，调用String重载的valueOf 或者 调用包装类的toString方法（object中自带，Integer重写）
+     String.valueOf(12);  此时返回值为string
+  
+​	其实String.valueOf(12)比较懒，直接调用Integer.toString(int i)方法。
+  ​	补充：[详解Integer.toString(int i)](https://blog.csdn.net/pfdvnah/article/details/106161048)
+  
+  6.string转换为基本数据类型；
     调用包装类中的一个本来存在的方法，Boolean.parseBoolean(str)，再用一个基本数据类型接收一下
   
 + 【经验】直接输出一个包装类，比如double的包装类，不会显示地址值，而是将他看成了double，输出了内容13.0
@@ -142,6 +145,7 @@
   System.out.println(obj1.getClass()); //此时显示为Integer类型
   System.out.println(obj1);	//输出的是15，因为1.实际运行时仍然把object看做为Integer类型的，又有输出语句带有自动类型转换，换为整数输出了。
   ```
+
 ```
   Object obj1 = new Integer(15);
   int ob1 = (Integer) obj1;

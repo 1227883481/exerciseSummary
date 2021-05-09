@@ -29,3 +29,13 @@
 ## 类文件结构-二进制的字节码文件
 
 ![image-20210508133107941](C:\Users\wang\AppData\Roaming\Typora\typora-user-images\image-20210508133107941.png)
+
+## 理解一下局部变量槽位和操作数栈
+
+![image-20210508215300995](C:\Users\wang\AppData\Roaming\Typora\typora-user-images\image-20210508215300995.png)
+
+## 类构造器方法<clinit>和实例构造器方法<init>
+
+一个在类初始化的时候执行（针对类中静态的那一套），一个是实例创建的时候调用（非静态的那些变量，方法块，非静态方法里的一系列东西）
+
+类方法，实例方法这两个词语一般也分别指的是静态方法和一般的方法。

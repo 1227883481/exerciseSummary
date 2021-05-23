@@ -1,3 +1,9 @@
+## MySQL基础
+
+### 关于group以及having的使用（包括having与where的区别）
+
+参考知乎文章：https://zhuanlan.zhihu.com/p/46925457
+
 ## MySQL架构
 
 ![查看源图像](https://th.bing.com/th/id/R74c321047ca0bb235d9f3f47de719180?rik=b4KfiDCJFQuv3Q&riu=http%3a%2f%2fwww.mysql.com%2fcommon%2fimages%2fPSEA_diagram.jpg&ehk=ytdXlA%2bVJs6m9hsN5zGwC%2fl%2b4gEHunw8FQZN0bK4iKA%3d&risl=&pid=ImgRaw)
@@ -26,10 +32,15 @@
 (11) LIMIT<limit_number>
 ```
 
-手写顺序
+**手写顺序**：
 
 ![image-20210518100854961](C:\Users\wang\AppData\Roaming\Typora\typora-user-images\image-20210518100854961.png)
 
-机读
+**机读**：
 
 ![image-20210518101947400](C:\Users\wang\AppData\Roaming\Typora\typora-user-images\image-20210518101947400.png)
+
+## MySQL Explain 之 type 详解
+
+参考链接 https://learnku.com/articles/44154
+

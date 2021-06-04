@@ -66,3 +66,6 @@
 
 如果索引失效（比如查询语句中vachar类型没有加单引号，mySQL会自动优化导致索引失效，此时行锁也会变表锁），表锁
 
+## JDBC
+
+![image-20210603102752841](C:\Users\wang\AppData\Roaming\Typora\typora-user-images\image-20210603102752841.png)

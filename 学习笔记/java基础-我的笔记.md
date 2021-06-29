@@ -122,20 +122,29 @@
   2.包装类转换为基本数据类型，传统方法可以调用类中的方法xxxValue
   	int num1 = int1.intValue();
   	或者也可以直接 int num1 = int1；自动拆箱
-  
+
 3.包装类到string，调用包装类的tostring()方法，tostring存在于最强父类object中，任何类都有。
   4.string 到包装类，与1相同，new
   	String s = new String("tom");
-  
+
   5.基本数据类型到string，调用String重载的valueOf 或者 调用包装类的toString方法（object中自带，Integer重写）
      String.valueOf(12);  此时返回值为string
-  
+
 ​	其实String.valueOf(12)比较懒，直接调用Integer.toString(int i)方法。
   ​	补充：[详解Integer.toString(int i)](https://blog.csdn.net/pfdvnah/article/details/106161048)
-  
+
   6.string转换为基本数据类型；
     调用包装类中的一个本来存在的方法，Boolean.parseBoolean(str)，再用一个基本数据类型接收一下
-  
+
+7. 数组转字符串，可以这样：
+
+   ```java
+   char[] data={'a','b','c'};   
+   String s = new String(data);
+   ```
+
+   
+
 + 【经验】直接输出一个包装类，比如double的包装类，不会显示地址值，而是将他看成了double，输出了内容13.0
   对于输出，基本都是如果涉及到了包装类，就是输出的值而不是地址值。
   但是如果要进行运算则必须要转化为基本数据类型才可以。
